@@ -11,13 +11,13 @@ const draw = {
   // Set image in background front cards
   setImageInFrontCards: () => {
     const shuffledFrontCardImagesURL = utils
-      .shuffle(CONSTANTS.emojiImagesURL)
+      .shuffle(CONSTANTS.familyImagesURL)
       .slice(0, CONSTANTS.cardsCount / 2);
     shuffledFrontCardImagesURL.push(...shuffledFrontCardImagesURL);
     const cards = utils.shuffle(shuffledFrontCardImagesURL);
 
     frontCards.forEach((frontCard, index) => {
-      frontCard.style.backgroundImage = `url("./assets/images/cards/front/emojis/${cards[index]}")`;
+      frontCard.style.backgroundImage = `url("./assets/images/cards/front/family/${cards[index]}")`;
       frontCard.style.backgroundPosition = "50% 50%";
       frontCard.style.backgroundSize = "cover";
     });
