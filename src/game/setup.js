@@ -3,8 +3,8 @@ const setup = {
   // Easy   - 20 cards - 4/5
   // Medium - 30 cards - 5/6
   // Hard   - 50 cards - 5/10
-  addCardsToUI: (difficult) => {
-    const cardsCount = CONSTANTS.difficults[difficult];
+  addCardsToUI: (difficulty) => {
+    const cardsCount = CONSTANTS.difficulties[difficulty];
     const rowsCount = 5;
     const columnsCount = cardsCount / rowsCount;
 
