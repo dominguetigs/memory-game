@@ -1,7 +1,7 @@
-const container = document.getElementById("container");
+const gameContainer = document.getElementById("game-container");
 
 // Event listener to identify clicked front card
-container.addEventListener("click", (e) => {
+gameContainer.addEventListener("click", (e) => {
   // Init game
   game.init(e.target);
 });

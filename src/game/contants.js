@@ -1,6 +1,11 @@
 const CONSTANTS = {
   // Cards total in game depending on difficulty
   cardsCount: 0,
+
+  points: {
+    success: 7,
+    total: 0,
+  },
   
   // Difficulty user can choose in the game
   difficulties: {

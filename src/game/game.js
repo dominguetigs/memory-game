@@ -1,3 +1,5 @@
+const pointsElement = document.querySelector('.score-container small span');
+
 const game = {
   // Set success class to equal flipped cards
   setSuccessToEqualFlippedCards: (card1, card2) => {
@@ -14,12 +16,21 @@ const game = {
       card2.children[0].style.backgroundImage
     ) {
       game.setSuccessToEqualFlippedCards(card1.parentElement, card2.parentElement);
+      setTimeout(() => game.setPoints(CONSTANTS.points.success), 800);
     } else {
       setTimeout(() => {
         card1.classList.remove("flipped");
         card2.classList.remove("flipped");
       }, 1000);
     }
+  },
+
+  // Set points
+  setPoints: (point) => {
+    const points = CONSTANTS.points.total;
+    const updatedPoints = points + point;
+    CONSTANTS.points.total = updatedPoints;
+    pointsElement.innerText = updatedPoints;
   },
 
   // Initialize memory game

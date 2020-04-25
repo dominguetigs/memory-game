@@ -12,7 +12,7 @@ const setup = {
     CONSTANTS.cardsCount = cardsCount;
 
     // Reset UI
-    container.innerHTML = "";
+    gameContainer.innerHTML = "";
 
     for (let i = 0; i < rowsCount; i++) {
       const rowElement = document.createElement("div");
@@ -35,7 +35,7 @@ const setup = {
         flipContainerElement.appendChild(flipElement);
         rowElement.appendChild(flipContainerElement);
       }
-      container.appendChild(rowElement);
+      gameContainer.appendChild(rowElement);
     }
   },
 };
