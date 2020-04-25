@@ -6,7 +6,7 @@ gameContainer.addEventListener("click", (e) => {
   game.init(e.target);
 });
 
-setup.addCardsToUI("easy");
+setup.addCardsToUI("hard");
 
 const backCards = document.querySelectorAll(".back");
 const frontCards = document.querySelectorAll(".front");

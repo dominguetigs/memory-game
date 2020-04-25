@@ -12,7 +12,7 @@ const draw = {
   setImageInFrontCards: () => {
     const shuffledFrontCardImagesURL = utils
       .shuffle(CONSTANTS.emojiImagesURL)
-      .slice(0, CONSTANTS.cardsLimit);
+      .slice(0, CONSTANTS.cardsCount / 2);
     shuffledFrontCardImagesURL.push(...shuffledFrontCardImagesURL);
     const cards = utils.shuffle(shuffledFrontCardImagesURL);
 
