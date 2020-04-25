@@ -3,8 +3,6 @@ const draw = {
   setImageInBackCards: () => {
     const shuffledBackCardImagesURL = utils.shuffle(CONSTANTS.backCardImagesUrl);
 
-    console.log(backCards);
-
     backCards.forEach((backCard) => {
       backCard.style.backgroundImage = `url("./assets/images/cards/back/${shuffledBackCardImagesURL[0]}")`;
     });
