@@ -82,7 +82,7 @@ body {
 }
 
 .success {
-    border: 2px solid green;
+    border: 2px solid rgba(0, 150, 50, 0.3);
     transform: scale(1.1);
     opacity: 0.5;
     transition: opacity 0.5s ease-in;
