@@ -1,6 +1,6 @@
 const setup = {
   // Add dinamically cards to UI (rows/columns)
-  // Easy   - 20 cards - 4/5
+  // Easy   - 20 cards - 5/4
   // Medium - 30 cards - 5/6
   // Hard   - 50 cards - 5/10
   addCardsToUI: (difficulty) => {
