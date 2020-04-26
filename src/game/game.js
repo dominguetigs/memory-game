@@ -16,7 +16,7 @@ const game = {
       card2.children[0].style.backgroundImage
     ) {
       game.setSuccessToEqualFlippedCards(card1.parentElement, card2.parentElement);
-      setTimeout(() => game.setPoints(CONSTANTS.points.success), 800);
+      setTimeout(() => game.setPoints(CONSTANTS.points.success), 1000);
     } else {
       setTimeout(() => {
         card1.classList.remove("flipped");
