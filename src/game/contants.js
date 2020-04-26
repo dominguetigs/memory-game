@@ -23,9 +23,7 @@ const CONSTANTS = {
     "card-background-5.jpg",
     "card-background-6.jpg",
     "card-background-7.jpg",
-    "card-background-8.jpg",
     "card-background-9.jpg",
-    "card-background-10.jpg",
   ],
 
   // Default category - to set images URL in front cards
