@@ -1,4 +1,4 @@
-# Small Memory Game using vanilla JS
+# Small Memory Game using JS
 
 ### How to run
 
