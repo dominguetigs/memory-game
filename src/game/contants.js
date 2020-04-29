@@ -1,4 +1,4 @@
-export const CONSTANTS = {
+const CONSTANTS = {
   // Cards total in game depending on difficulty
   cardsCount: 0,
 

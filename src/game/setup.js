@@ -1,15 +1,12 @@
-import { CONSTANTS } from './contants';
-import { gameContainer } from '../index';
-
-export const setup = {
+const setup = {
   // Add dinamically cards to UI (rows/columns)
   // Easy   - 20 cards - 5/4
   // Medium - 30 cards - 5/6
   // Hard   - 50 cards - 5/10
-  addCardsToUI(difficulty: 'easy' | 'medium' | 'hard') {
-    const cardsCount: number = CONSTANTS.difficulties[difficulty];
-    const rowsCount: number = 5;
-    const columnsCount: number = cardsCount / rowsCount;
+  addCardsToUI(difficulty) {
+    const cardsCount = CONSTANTS.difficulties[difficulty];
+    const rowsCount = 5;
+    const columnsCount = cardsCount / rowsCount;
 
     // Update cards count
     CONSTANTS.cardsCount = cardsCount;

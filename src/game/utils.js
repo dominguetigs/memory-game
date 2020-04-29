@@ -1,6 +1,6 @@
-export const utils = {
+const utils = {
   // Shuffle elements in array
-  shuffle: (array: string[]) => {
+  shuffle: (array) => {
     let currentIndex = array.length;
     let temporaryValue;
     let randomIndex;

@@ -1,10 +1,8 @@
-import { CONSTANTS } from './contants';
+const pointsElement = document.querySelector('.score-container small span');
 
-const pointsElement: any = document.querySelector('.score-container small span');
-
-export const game = {
+const game = {
   // Set success class to equal flipped cards
-  setSuccessToEqualFlippedCards: (card1: any, card2: any) => {
+  setSuccessToEqualFlippedCards: (card1, card2) => {
     setTimeout(() => {
       card1.classList.add("success");
       card2.classList.add("success");
@@ -12,7 +10,7 @@ export const game = {
   },
 
   // Check if flipped cards are equals
-  checkEqualCards: (card1: any, card2: any) => {
+  checkEqualCards: (card1, card2) => {
     if (
       card1.children[0].style.backgroundImage ===
       card2.children[0].style.backgroundImage
@@ -28,7 +26,7 @@ export const game = {
   },
 
   // Set points
-  setPoints: (point: number) => {
+  setPoints: (point) => {
     const points = CONSTANTS.points.total;
     const updatedPoints = points + point;
     CONSTANTS.points.total = updatedPoints;
@@ -36,7 +34,7 @@ export const game = {
   },
 
   // Initialize memory game
-  init: (clickedCard: any) => {
+  init: (clickedCard) => {
     const parentElement = clickedCard.parentElement;
 
     if (
