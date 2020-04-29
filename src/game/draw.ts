@@ -1,9 +1,15 @@
-const draw = {
+import { CONSTANTS } from './contants';
+import { utils } from './utils';
+
+const backCards: any = document.querySelectorAll(".back");
+const frontCards: any = document.querySelectorAll(".front");
+
+export const draw = {
   // Set image in background back cards
   setImageInBackCards: () => {
     const shuffledBackCardImagesURL = utils.shuffle(CONSTANTS.backCardImagesUrl);
 
-    backCards.forEach((backCard) => {
+    backCards.forEach((backCard: any) => {
       backCard.style.backgroundImage = `url("./assets/images/cards/back/${shuffledBackCardImagesURL[0]}")`;
     });
   },
@@ -16,7 +22,7 @@ const draw = {
     shuffledFrontCardImagesURL.push(...shuffledFrontCardImagesURL);
     const cards = utils.shuffle(shuffledFrontCardImagesURL);
 
-    frontCards.forEach((frontCard, index) => {
+    frontCards.forEach((frontCard: any, index: number) => {
       frontCard.style.backgroundImage = `url("./assets/images/cards/front/emojis/${cards[index]}")`;
       frontCard.style.backgroundPosition = "50% 50%";
       frontCard.style.backgroundSize = "cover";
