@@ -13,5 +13,3 @@ const frontCards = document.querySelectorAll(".front");
 
 draw.setImageInBackCards();
 draw.setImageInFrontCards();
-
-console.log(12132);
