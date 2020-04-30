@@ -1,4 +1,4 @@
-const utils = {
+export const utils = {
   // Shuffle elements in array
   shuffle: (array) => {
     let currentIndex = array.length;
