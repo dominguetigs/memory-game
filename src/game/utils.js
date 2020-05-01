@@ -1,6 +1,6 @@
 export const utils = {
   // Shuffle elements in array
-  shuffle: (array) => {
+  shuffle(array) {
     let currentIndex = array.length;
     let temporaryValue;
     let randomIndex;
@@ -19,4 +19,12 @@ export const utils = {
 
     return array;
   },
+
+  getRandomNumber(range) {
+    if (!range) {
+      range = 1;
+    }
+    
+    return Math.floor(Math.random() * range);
+  }
 };

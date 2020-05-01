@@ -5,6 +5,7 @@
 }
 
 body {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,11 +14,70 @@ body {
   font-family: "Roboto Mono", monospace;
 }
 
-/*.container {
-    
-}*/
+.modal-container {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  transition: display 1s ease-in-out;
+}
+
+.modal-container .modal {
+  position: absolute;
+  top: calc(50% - 110px);
+  left: calc(50% - 110px);
+  width: 220px;
+  height: 220px;
+  padding: 30px 20px;
+  background-color: #D2D2D2;
+  border: 2px solid rgba(50, 150, 0, 0.5);
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-container .modal .modal-header {
+  text-align: center;
+}
+
+.modal-container .modal .modal-header h3 {
+  margin: 0;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.3);
+  font-weight: 900;
+}
+
+.modal-container .modal .modal-actions {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-container .modal .modal-actions button {
+  position: absolute;
+  left: calc(50% - 50px);
+  top: calc(50% - 25px);
+  width: 100px;
+  height: 50px;
+  border: 2px solid rgba(50, 150, 0, 0.5);
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(50, 150, 0, 0.3);
+  color: rgba(50, 150, 0, 0.8);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.container {
+  display: none;
+  transition: display 1s ease-in-out;
+}
 
 .score-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.score-container .score {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -26,25 +86,54 @@ body {
   background: #ffffff;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
-  margin: 0 auto;
-  margin-bottom: 20px;
   padding: 10px;
+  filter: blur(3px);
+  transform: scale(0.8);
+  transition: all 1s ease-in-out;
 }
 
-.score-container h4 {
+.score-container .score h4 {
   margin: 0;
-  background: rgba(0, 150, 50, 0.3);
   padding: 5px 10px;
   margin-bottom: 15px;
 }
 
-.score-container small {
+.score-container .score.player {
+  border: 2px solid rgba(0, 150, 50, 0.3);
+}
+
+.score-container .score.enemy {
+  border: 2px solid rgba(150, 0, 50, 0.3);
+}
+
+.score-container .score.player.turn, .score.enemy.turn {
+  filter: blur(0px);
+  transform: scale(1);
+  transition: all 1s ease-in-out;
+}
+
+.score-container .score.player h4 {
+  background: rgba(0, 150, 50, 0.3);
+}
+
+.score-container .score.enemy h4 {
+  background: rgba(150, 0, 50, 0.3);
+}
+
+.score-container .score small {
   font-size: 20px;
   font-weight: 700;
 }
 
-.score-container small span {
+.score-container .score small span {
   color: rgba(0, 150, 50, 0.7);
+}
+
+.score-container .chronometer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .game-container {
@@ -88,6 +177,7 @@ body {
   background-position: 50% 50%;
   background-size: cover;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .flip .front {
@@ -97,6 +187,7 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   transform: rotateY(180deg);
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .flipped {

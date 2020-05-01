@@ -4,7 +4,7 @@
   "description": "Just run index.html directly or using some live reload extension (Live Server).",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open",
+    "start": "webpack-dev-server --host 0.0.0.0 --open",
     "build": "webpack"
   },
   "repository": {

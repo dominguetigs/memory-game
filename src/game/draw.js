@@ -1,11 +1,11 @@
-import Setup from './setup';
+import { difficulties } from './contants';
 import { utils } from './utils';
 import { backCardImagesUrl, emojiImagesURL } from './contants';
 
-export default class Draw extends Setup {
+export default class Draw {
 
   constructor(gameContainer, difficulty) {
-    super(difficulty);
+    this.cardsQuantity = difficulties[difficulty];
     this.gameContainer = gameContainer;
   }
 
@@ -41,15 +41,13 @@ export default class Draw extends Setup {
       this.gameContainer.appendChild(rowElement);
     }
 
-    const backCards = document.querySelectorAll('.back');
-    const frontCards = document.querySelectorAll('.front');
-
-    this._setImageInBackCards(backCards);
-    this._setImageInFrontCards(frontCards);
+    this._setImageInBackCards();
+    this._setImageInFrontCards();
   }
 
   // Set image in background back cards
-  _setImageInBackCards(backCards) {
+  _setImageInBackCards() {
+    const backCards = document.querySelectorAll('.back');
     const shuffledBackCardImagesURL = utils.shuffle(backCardImagesUrl);
 
     backCards.forEach((backCard) => {
@@ -58,7 +56,8 @@ export default class Draw extends Setup {
   }
 
   // Set image in background front cards
-  _setImageInFrontCards(frontCards) {
+  _setImageInFrontCards() {
+    const frontCards = document.querySelectorAll('.front');
     const shuffledFrontCardImagesURL = utils
       .shuffle(emojiImagesURL)
       .slice(0, this.cardsQuantity / 2);

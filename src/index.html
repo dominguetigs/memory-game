@@ -10,10 +10,31 @@
   <body>
     <div class="container">
       <div class="score-container">
-        <h4>Score</h4>
-        <small><span>0</span> points</small>
+        <div class="score player">
+          <h4>You</h4>
+          <small><span></span> points</small>
+        </div>
+        <!-- <div class="chronometer">
+          <i>Relógio</i>
+          <small>10</small>
+        </div> -->
+        <div class="score enemy">
+          <h4>Computer</h4>
+          <small><span></span> points</small>
+        </div>
       </div>
       <div id="game-container" class="game-container"></div>
+    </div>
+
+    <div class="modal-container">
+      <div class="modal">
+        <div class="modal-header">
+          <h3>Jogo da memória</h3>
+        </div>
+        <div class="modal-actions">
+          <button type="button">JOGAR</button>
+        </div>
+      </div>
     </div>
 
     <script src="main.js"></script>
