@@ -1,12 +1,14 @@
-# Small Memory Game using JS
+# Small Memory Game using JS and WEBPACK
 
 ### How to run
 
-Just run index.html directly or using some live reload extension (Live Server).
+1. Install `nodejs`;
+2. Install dependencies with command `npm install`;
+3. Run `npm run start`.
 
 ### Game Example
 
-![](./src/assets/images/memory-game-example.png)
+![](./src/assets/images/memory-game.png)
 
 ### Game demonstration
 
