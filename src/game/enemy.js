@@ -8,13 +8,7 @@ export default class Enemy {
         this.points = 0;
 
         /**
-         * PC Memory to store flipped cards
-         * 
-         * {
-         *    index: 0,
-         *    imageUrl: '',
-         *    hasPair: false,
-         * }
+         * PC Memory
          */
         this.memory = {
             cards: [],
