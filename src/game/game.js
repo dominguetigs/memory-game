@@ -44,6 +44,10 @@ export default class Game {
         ".flip-container:not(.success) .flipped"
       );
 
+      if (flippedCard[0] === clickedCard) {
+        return;
+      }
+
       if (flippedCard.length < 2) {
         clickedCard.classList.toggle("flipped");
 
