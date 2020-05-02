@@ -21,20 +21,13 @@ export default class Enemy {
 
     play() {
 
-        let index1 = 0
-        let index2 = 0;
+        let index1;
+        let index2;
 
-        this._updatePairs();
-
-        if (this.difficulty === 'medium' && this.memory.pairs.length) {
+        if ((this.difficulty === 'hard' || this.difficulty === 'medium') && this.memory.pairs.length) {
             const cardsPair = this.memory.cards.filter(m => m.imageUrl === this.memory.pairs[0]);
             index1 = cardsPair[0].index;
             index2 = cardsPair[1].index;
-
-            // Clear cards in memory
-            this.memory.cards.splice(this.memory.cards.indexOf(cardsPair[0]), 1);
-            this.memory.cards.splice(this.memory.cards.indexOf(cardsPair[1]), 1);
-            this.memory.pairs.splice(0, 1);
 
             this._flipCards(index1, index2);
 
@@ -49,22 +42,53 @@ export default class Enemy {
             }
         }
 
-        if (notFlippedCards.length) {
-            while(index1 === index2) {
-                index1 = notFlippedCards[utils.getRandomNumber(notFlippedCards.length)];
-                index2 = notFlippedCards[utils.getRandomNumber(notFlippedCards.length)];
+        if (this.difficulty === 'hard') {
+            const indexes = this.memory.cards.map(m => m.index);
+
+            for (const index of indexes) {
+                notFlippedCards.splice(notFlippedCards.indexOf(index), 1);
             }
-    
+        }
+
+        if (notFlippedCards.length) {
+            while (index1 === index2) {
+                index1 = notFlippedCards[utils.getRandomNumber(notFlippedCards.length)];
+
+                if (this.difficulty === 'hard') {
+                    const imageUrl = [...this.cards][index1].children[0].style.backgroundImage;
+                    const card = this.memory.cards.filter(m => m.imageUrl === imageUrl);
+                    index2 = card.length ? card[0].index : null;
+                }
+
+                index2 = index2 || notFlippedCards[utils.getRandomNumber(notFlippedCards.length)];
+            }
+
             this._flipCards(index1, index2);
         }
     }
 
     addCardsToMemory(...cards) {
-        if (cards[0].children[0].style.backgroundImage === cards[1].children[0].style.backgroundImage) {
+        const imageUrl1 = cards[0].children[0].style.backgroundImage;
+        const imageUrl2 = cards[1].children[0].style.backgroundImage;
+
+        if (imageUrl1 === imageUrl2) {
             this.memory.flipped.push(
                 [...this.cards].indexOf(cards[0]),
                 [...this.cards].indexOf(cards[1]),
             );
+
+            const memoryCards = this.memory.cards.filter(m => m.imageUrl === imageUrl1);
+            
+            for (const card of memoryCards) {
+                this.memory.cards.splice(this.memory.cards.indexOf(card), 1);
+            }
+
+            const memoryPairs = this.memory.pairs.filter(m => m === imageUrl1);
+            
+            if (memoryPairs.length) {
+                this.memory.pairs.splice(this.memory.pairs.indexOf(memoryPairs[0]), 1);
+            }
+
             return;
         }
 
@@ -97,16 +121,6 @@ export default class Enemy {
         }
 
         this.memory.cards.push(cardInMemory);
-    }
-
-    _updatePairs() {
-        for (let i = this.memory.pairs.length - 1; i >=0; i--) {
-            const pair = this.memory.pairs[i];
-
-            if (this.memory.flipped.indexOf(pair[0]) > -1 || this.memory.flipped.indexOf(pair[1]) > -1) {
-                this.memory.pairs.splice(i, 1);
-            }
-        }
     }
 
     _checkHasCardIndexInMemory(cardIndex) {

@@ -12,5 +12,5 @@ gameStartButton.addEventListener('click', e => {
     (new Draw(gameContainer, 'easy')).init();
     modalContainer.style.display = 'none';
     container.style.display = 'block';
-    (new Game('medium')).init();
+    (new Game('hard')).init();
 });
