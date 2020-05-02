@@ -52,7 +52,11 @@ export default class Enemy {
 
         if (notFlippedCards.length) {
             while (index1 === index2) {
-                index1 = notFlippedCards[utils.getRandomNumber(notFlippedCards.length)];
+                const indexesToRandom = [...notFlippedCards];
+                const i1 = utils.getRandomNumber(indexesToRandom.length);
+                indexesToRandom.splice(i1);
+
+                index1 = notFlippedCards[i1];
 
                 if (this.difficulty === 'hard') {
                     const imageUrl = [...this.cards][index1].children[0].style.backgroundImage;
@@ -60,7 +64,9 @@ export default class Enemy {
                     index2 = card.length ? card[0].index : null;
                 }
 
-                index2 = index2 || notFlippedCards[utils.getRandomNumber(notFlippedCards.length)];
+                console.log(index1, index2);
+
+                index2 = index2 || indexesToRandom[utils.getRandomNumber(indexesToRandom.length)];
             }
 
             this._flipCards(index1, index2);
