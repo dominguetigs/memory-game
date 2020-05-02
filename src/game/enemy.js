@@ -24,6 +24,8 @@ export default class Enemy {
         let index1 = 0
         let index2 = 0;
 
+        this._updatePairs();
+
         if (this.difficulty === 'medium' && this.memory.pairs.length) {
             const cardsPair = this.memory.cards.filter(m => m.imageUrl === this.memory.pairs[0]);
             index1 = cardsPair[0].index;
@@ -95,6 +97,16 @@ export default class Enemy {
         }
 
         this.memory.cards.push(cardInMemory);
+    }
+
+    _updatePairs() {
+        for (let i = this.memory.pairs.length - 1; i >=0; i--) {
+            const pair = this.memory.pairs[i];
+
+            if (this.memory.flipped.indexOf(pair[0]) > -1 || this.memory.flipped.indexOf(pair[1]) > -1) {
+                this.memory.pairs.splice(i, 1);
+            }
+        }
     }
 
     _checkHasCardIndexInMemory(cardIndex) {
