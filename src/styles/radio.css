@@ -1,3 +1,8 @@
+:root {
+    --primary: rgba(50, 150, 0, 0.8);
+    --other: rgba(0, 0, 0, 0.5);
+}
+
 /* label */
 label.custom-checkbox {
   display: flex;
@@ -5,7 +10,7 @@ label.custom-checkbox {
   align-items: center;
   flex-wrap: nowrap;
 
-  margin: 12px 0;
+  margin: 0 12px;
 
   cursor: pointer;
   position: relative;
@@ -26,15 +31,14 @@ label.custom-checkbox .design {
   width: 16px;
   height: 16px;
 
-  border: 1px solid #000000;
+  border: 1px solid var(--other);
   border-radius: 100%;
-  margin-right: 16px;
+  margin-right: 5px;
 
   position: relative;
 }
 
-label.custom-checkbox .design::before,
-label.custom-checkbox .design::after {
+label.custom-checkbox .design::before, .design::after {
   content: "";
   display: block;
 
@@ -49,47 +53,48 @@ label.custom-checkbox .design::after {
 }
 
 label.custom-checkbox .design:before {
-  background: #000000;
+  background: var(--other);
   opacity: 0;
   transition: 0.3s;
 }
 
 label.custom-checkbox .design::after {
-  background: rgba(50, 150, 0, 0.5);
+  background: var(--primary);
   opacity: 0.4;
   transition: 0.6s;
 }
 
 /* .text */
 label.custom-checkbox .text {
+  color: var(--other);
   font-family: "Roboto Mono", monospace;
   font-size: 14px;
   font-weight: bold;
 }
 
 /* checked state */
-label.custom-checkbox input:checked + label.custom-checkbox .design::before {
+label.custom-checkbox input:checked + .design::before {
   opacity: 1;
-  transform: scale(0.6);
+  transform: scale(0.5);
 }
 
 /* other states */
-label.custom-checkbox input:hover + label.custom-checkbox .design,
-label.custom-checkbox input:focus + label.custom-checkbox .design {
-  border: 1px solid rgba(50, 150, 0, 0.5);
+label.custom-checkbox input:hover + .design,
+label.custom-checkbox input:focus + .design {
+  border: 1px solid var(--primary);
 }
 
-label.custom-checkbox input:hover + label.custom-checkbox .design:before,
-label.custom-checkbox input:focus + label.custom-checkbox .design:before {
-  background: rgba(50, 150, 0, 0.5);
+label.custom-checkbox input:hover + .design:before,
+label.custom-checkbox input:focus + .design:before {
+  background: var(--primary);
 }
 
 label.custom-checkbox input:hover ~ .text {
-  color: rgba(50, 150, 0, 0.5);
+  color: var(--primary);
 }
 
-label.custom-checkbox input:focus + label.custom-checkbox .design::after,
-label.custom-checkbox input:active + label.custom-checkbox .design::after {
+label.custom-checkbox input:focus + .design::after,
+label.custom-checkbox input:active + .design::after {
   opacity: 0.1;
-  transform: scale(2.6);
+  transform: scale(2.0);
 }
