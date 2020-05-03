@@ -1,6 +1,5 @@
 import Player from './player';
 import Enemy from './enemy';
-import { utils } from './utils';
 
 const enemyScore = document.querySelector('.score.enemy');
 const playerScore = document.querySelector('.score.player');
@@ -12,7 +11,7 @@ export default class Game {
     this.player = new Player();
     this.enemy = new Enemy(this.cards, difficulty);
     // if turn is true Player plays, turn is false Enemy plays
-    this.turn = !!utils.getRandomNumber();
+    this.turn = !!Math.round(Math.random());
   }
 
   init() {
@@ -30,6 +29,8 @@ export default class Game {
     if (!this.turn) {
       enemyScore.classList.toggle('turn');
       this.enemy.play();
+    } else {
+      playerScore.classList.toggle('turn');
     }
   }
 

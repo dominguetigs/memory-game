@@ -21,10 +21,6 @@ export const utils = {
   },
 
   getRandomNumber(range) {
-    if (!range) {
-      range = 1;
-    }
-    
     return Math.floor(Math.random() * range);
   }
 };
