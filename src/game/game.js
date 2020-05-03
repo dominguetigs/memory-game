@@ -129,8 +129,6 @@ export default class Game {
 
     if (!this.turn) {
       this.enemy.play();
-    } else {
-
     }
   }
 }

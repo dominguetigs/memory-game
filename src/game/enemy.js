@@ -54,7 +54,7 @@ export default class Enemy {
             while (index1 === index2) {
                 const indexesToRandom = [...notFlippedCards];
                 const i1 = utils.getRandomNumber(indexesToRandom.length);
-                indexesToRandom.splice(i1);
+                indexesToRandom.splice(i1, 1);
 
                 index1 = notFlippedCards[i1];
 
@@ -63,8 +63,6 @@ export default class Enemy {
                     const card = this.memory.cards.filter(m => m.imageUrl === imageUrl);
                     index2 = card.length ? card[0].index : null;
                 }
-
-                console.log(index1, index2);
 
                 index2 = index2 || indexesToRandom[utils.getRandomNumber(indexesToRandom.length)];
             }
