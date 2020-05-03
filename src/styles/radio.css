@@ -1,0 +1,95 @@
+/* label */
+label.custom-checkbox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  margin: 12px 0;
+
+  cursor: pointer;
+  position: relative;
+}
+
+/* input */
+label.custom-checkbox input {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/* .design */
+label.custom-checkbox .design {
+  width: 16px;
+  height: 16px;
+
+  border: 1px solid #000000;
+  border-radius: 100%;
+  margin-right: 16px;
+
+  position: relative;
+}
+
+label.custom-checkbox .design::before,
+label.custom-checkbox .design::after {
+  content: "";
+  display: block;
+
+  width: inherit;
+  height: inherit;
+
+  border-radius: inherit;
+
+  position: absolute;
+  transform: scale(0);
+  transform-origin: center center;
+}
+
+label.custom-checkbox .design:before {
+  background: #000000;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+label.custom-checkbox .design::after {
+  background: rgba(50, 150, 0, 0.5);
+  opacity: 0.4;
+  transition: 0.6s;
+}
+
+/* .text */
+label.custom-checkbox .text {
+  font-family: "Roboto Mono", monospace;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* checked state */
+label.custom-checkbox input:checked + label.custom-checkbox .design::before {
+  opacity: 1;
+  transform: scale(0.6);
+}
+
+/* other states */
+label.custom-checkbox input:hover + label.custom-checkbox .design,
+label.custom-checkbox input:focus + label.custom-checkbox .design {
+  border: 1px solid rgba(50, 150, 0, 0.5);
+}
+
+label.custom-checkbox input:hover + label.custom-checkbox .design:before,
+label.custom-checkbox input:focus + label.custom-checkbox .design:before {
+  background: rgba(50, 150, 0, 0.5);
+}
+
+label.custom-checkbox input:hover ~ .text {
+  color: rgba(50, 150, 0, 0.5);
+}
+
+label.custom-checkbox input:focus + label.custom-checkbox .design::after,
+label.custom-checkbox input:active + label.custom-checkbox .design::after {
+  opacity: 0.1;
+  transform: scale(2.6);
+}

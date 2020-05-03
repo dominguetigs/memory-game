@@ -25,10 +25,10 @@ body {
 
 .modal-container .modal {
   position: absolute;
-  top: calc(50% - 110px);
-  left: calc(50% - 110px);
-  width: 220px;
-  height: 220px;
+  top: calc(50% - 125px);
+  left: calc(50% - 125px);
+  width: 250px;
+  height: 250px;
   padding: 30px 20px;
   background-color: #D2D2D2;
   border: 2px solid rgba(50, 150, 0, 0.5);
@@ -46,6 +46,13 @@ body {
   font-weight: 900;
 }
 
+.modal-container .modal .modal-settings {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 50px;
+}
+
 .modal-container .modal .modal-actions {
   position: relative;
   width: 100%;
@@ -54,8 +61,9 @@ body {
 
 .modal-container .modal .modal-actions button {
   position: absolute;
+  outline: 0;
   left: calc(50% - 50px);
-  top: calc(50% - 25px);
+  top: calc(50% - 50px);
   width: 100px;
   height: 50px;
   border: 2px solid rgba(50, 150, 0, 0.5);
@@ -64,6 +72,12 @@ body {
   color: rgba(50, 150, 0, 0.8);
   font-weight: 800;
   cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+
+.modal-container .modal .modal-actions button:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out;
 }
 
 .container {
