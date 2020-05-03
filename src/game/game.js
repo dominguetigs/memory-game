@@ -71,11 +71,11 @@ export default class Game {
         const modalContainer = document.querySelector('.modal-container');
         modalContainer.style.display = 'block';
 
-        const text = this.player.points === this.enemy.points ? 'EMPATE!' :
-          (this.player.points > this.enemy.points ? 'VOCÊ VENCEU!' : 'VOCÊ PERDEU!');
+        const text = this.player.points === this.enemy.points ? 'TIE!' :
+          (this.player.points > this.enemy.points ? 'VICTORY!' : 'DEFEAT!');
 
         modalContainer.children[0].children[0].children[0].innerText = text;
-        modalContainer.children[0].children[1].children[0].innerText = 'Jogar novamente';
+        modalContainer.children[0].children[1].children[0].innerText = 'PLAY AGAIN';
       }, 1500);
     }
   }
