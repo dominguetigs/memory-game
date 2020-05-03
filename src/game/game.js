@@ -75,7 +75,7 @@ export default class Game {
           (this.player.points > this.enemy.points ? 'VICTORY!' : 'DEFEAT!');
 
         modalContainer.children[0].children[0].children[0].innerText = text;
-        modalContainer.children[0].children[1].children[0].innerText = 'PLAY AGAIN';
+        modalContainer.children[0].children[2].children[0].innerText = 'PLAY AGAIN';
       }, 1500);
     }
   }
