@@ -82,7 +82,7 @@ export default class Draw {
         
         flipContainerElement[i].style.transition = 'all 0.7s ease-in-out';
         flipContainerElement[i].style.transform = 'scale(1)';
-      }, 200 * i);
+      }, 150 * i);
     }
   }
 }
