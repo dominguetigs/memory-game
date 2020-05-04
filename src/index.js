@@ -11,10 +11,10 @@ modalContainer.style.display = 'block';
 gameStartButton.addEventListener('click', e => {
     const difficulty = document.querySelector('input[name="difficulty"]:checked').value;
 
-    (new Draw(gameContainer, 'easy')).init();
-
     modalContainer.style.display = 'none';
     container.style.display = 'block';
 
-    (new Game(difficulty)).init();
+    (new Draw(gameContainer, 'easy')).init();
+
+    setTimeout(() => (new Game(difficulty)).init(), 4500);
 });

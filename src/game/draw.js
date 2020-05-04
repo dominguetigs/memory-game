@@ -24,6 +24,7 @@ export default class Draw {
       for (let j = 0; j < columnsCount; j++) {
         const flipContainerElement = document.createElement("div");
         flipContainerElement.classList.add("flip-container");
+        flipContainerElement.style.transform = 'scale(0)';
 
         const flipElement = document.createElement("div");
         flipElement.classList.add("flip");
@@ -43,6 +44,7 @@ export default class Draw {
 
     this._setImageInBackCards();
     this._setImageInFrontCards();
+    this._setCards();
   }
 
   // Set image in background back cards
@@ -69,5 +71,18 @@ export default class Draw {
       frontCard.style.backgroundPosition = "50% 50%";
       frontCard.style.backgroundSize = "cover";
     });
+  }
+
+  _setCards() {
+    const flipContainerElement = [...document.querySelectorAll('.flip-container')];
+    
+    for (let i = 0; i < flipContainerElement.length; i++) {
+
+      setTimeout(() => {
+        
+        flipContainerElement[i].style.transition = 'all 0.7s ease-in-out';
+        flipContainerElement[i].style.transform = 'scale(1)';
+      }, 200 * i);
+    }
   }
 }
