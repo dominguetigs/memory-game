@@ -16,5 +16,5 @@ gameStartButton.addEventListener('click', e => {
 
     (new Draw(gameContainer, 'easy')).init();
 
-    setTimeout(() => (new Game(difficulty)).init(), 4000);
+    setTimeout(() => (new Game(difficulty)).init(), 3300);
 });
