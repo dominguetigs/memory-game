@@ -5,6 +5,8 @@ const container = document.querySelector('.container');
 const gameContainer = document.getElementById("game-container");
 const modalContainer = document.querySelector('.modal-container');
 const gameStartButton = document.querySelector('.modal button');
+const enemyScore = document.querySelector('.score.enemy');
+const playerScore = document.querySelector('.score.player');
 
 modalContainer.style.display = 'block';
 
@@ -13,6 +15,8 @@ gameStartButton.addEventListener('click', e => {
 
     modalContainer.style.display = 'none';
     container.style.display = 'block';
+    enemyScore.classList.remove('turn');
+    playerScore.classList.remove('turn');
 
     (new Draw(gameContainer, 'easy')).init();
 
