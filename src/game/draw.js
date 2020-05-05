@@ -79,7 +79,7 @@ export default class Draw {
     for (let i = 0; i < flipContainerElement.length; i++) {
 
       setTimeout(() => {
-        
+
         flipContainerElement[i].style.transition = 'all 0.7s ease-in-out';
         flipContainerElement[i].style.transform = 'scale(1)';
       }, 110 * i);

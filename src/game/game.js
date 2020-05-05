@@ -1,5 +1,6 @@
 import Player from './player';
 import Enemy from './enemy';
+import { audios } from './contants';
 
 const enemyScore = document.querySelector('.score.enemy');
 const playerScore = document.querySelector('.score.player');
@@ -12,6 +13,11 @@ export default class Game {
     this.enemy = new Enemy(this.cards, difficulty);
     // if turn is true Player plays, turn is false Enemy plays
     this.turn = !!Math.round(Math.random());
+    this.sounds = {
+      flippedCard: document.getElementById('flippedCardAudio'),
+      points: document.getElementById('pointsAudio'),
+      victory: document.getElementById('victoryAudio'),
+    };
   }
 
   init() {
@@ -49,6 +55,10 @@ export default class Game {
         return;
       }
 
+      this.sounds.flippedCard.play();
+      this.sounds.flippedCard.volume = 0.5;
+      this.sounds.flippedCard.currentTime = 0;
+
       if (flippedCard.length < 2) {
         clickedCard.classList.toggle("flipped");
 
@@ -75,6 +85,8 @@ export default class Game {
         const text = this.player.points === this.enemy.points ? 'TIE!' :
           (this.player.points > this.enemy.points ? 'VICTORY!' : 'DEFEAT!');
 
+        this.sounds.victory.play();
+
         modalContainer.children[0].children[0].children[0].innerText = text;
         modalContainer.children[0].children[2].children[0].innerText = 'PLAY AGAIN';
       }, 1500);
@@ -90,7 +102,13 @@ export default class Game {
       card2.children[0].style.backgroundImage
     ) {
       this._setSuccessToEqualFlippedCards(card1.parentElement, card2.parentElement);
-      setTimeout(() => this._setPoints(), 1000);
+      setTimeout(() => {
+        if (this.turn) {
+          this.sounds.points.play();
+          this.sounds.points.volume = 0.2;
+        }
+        this._setPoints();
+      }, 1000);
       this._setTurn();
     } else {
       setTimeout(() => {
