@@ -4,25 +4,21 @@
 
 # Índice
 
-- [Sobre](#sobre)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Screens](#screens)
-- [Como Usar](#como-usar)
-- [Como Contribuir](#como-contribuir)
+- [Sobre](#-sobre)
+- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [Screens](#-screens)
+- [Como Usar](#-como-usar)
+- [Como Contribuir](#-como-contribuir)
 
 <h3 align="center">
   <a href="https://dominguetigs.github.io/memory-game/src" target="_blank">Acessar a demonstração</a>
 </h3>
-
-<a id="sobre"></a>
 
 ## :bookmark: Sobre
 
 Jogo criado no intuito de reforçar alguns aprendizados nas tecnologias mas utilizadas da Web.
 
 ---
-
-<a id="tecnologias-utilizadas"></a>
 
 ## :rocket: Tecnologias Utilizadas
 
@@ -33,8 +29,6 @@ Além de ter sido construído totalmente em **Javascript**, **CSS3** e **HTML5**
 
 ---
 
-<a id="screens"></a>
-
 ## :iphone: Screens
 
 <h4 align="center">
@@ -42,8 +36,6 @@ Além de ter sido construído totalmente em **Javascript**, **CSS3** e **HTML5**
 </h4>
 
 ---
-
-<a id="como-usar"></a>
 
 ## :fire: Como usar
 
@@ -59,8 +51,6 @@ Além de ter sido construído totalmente em **Javascript**, **CSS3** e **HTML5**
 ```
 
 ---
-
-<a id="como-contribuir"></a>
 
 ## :recycle: Como contribuir
 
