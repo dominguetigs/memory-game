@@ -7,7 +7,7 @@
     <img alt="Node.js version" src="https://img.shields.io/badge/node-v12.18.0-74AB63">
   </a>
   <a href="https://yarnpkg.com/" target="_blank">
-    <img alt="Yarn version" src="https://img.shields.io/badge/yarn-v1.22.4-blue%20">
+    <img alt="Yarn version" src="https://img.shields.io/badge/yarn-v1.22.4-2C8EBB">
   </a>
   <a href="https://www.linkedin.com/in/gustavodomingueti/" target="_blank">
     <img alt="Made by Gustavo Domingueti" src="https://img.shields.io/badge/made%20by-Gustavo%20Domingueti-0078D7">
