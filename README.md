@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://nodejs.org/en/" target="_blank">
-    <img alt="Node.js version" src="https://img.shields.io/badge/node-v12.18.0-brightgreen">
+    <img alt="Node.js version" src="https://img.shields.io/badge/node-v12.18.0-74AB63">
   </a>
   <a href="https://yarnpkg.com/" target="_blank">
     <img alt="Yarn version" src="https://img.shields.io/badge/yarn-v1.22.4-blue%20">
