@@ -23,8 +23,6 @@
 
 Jogo criado no intuito de reforçar alguns aprendizados nas tecnologias mas utilizadas da Web.
 
----
-
 <a id="tecnologias-utilizadas"></a>
 
 ## :rocket: Tecnologias Utilizadas
@@ -33,8 +31,6 @@ Além de ter sido construído totalmente em **Javascript**, **CSS3** e **HTML5**
 
 - [Webpack](https://webpack.js.org/)
 - [Babel](https://babeljs.io/)
-
----
 
 <a id="screens"></a>
 
@@ -48,8 +44,6 @@ Além de ter sido construído totalmente em **Javascript**, **CSS3** e **HTML5**
       src="https://ik.imagekit.io/lke8mppx9a/memory-game_cfbWxU5d2.png"
     />
 </h4>
-
----
 
 <a id="como-usar"></a>
 
@@ -66,8 +60,6 @@ Além de ter sido construído totalmente em **Javascript**, **CSS3** e **HTML5**
   $ npm start
 ```
 
----
-
 <a id="como-contribuir"></a>
 
 ## :recycle: Como contribuir
@@ -77,13 +69,9 @@ Além de ter sido construído totalmente em **Javascript**, **CSS3** e **HTML5**
 - Commit suas mudanças: `git commit -m 'feat: My new feature'`
 - Push a sua branch: `git push origin my-feature`
 
----
-
 ## :memo: License
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
 
 <h4 align="center">
     Feito com 💙 por <a
