@@ -11,7 +11,10 @@
 - [Como Contribuir](#como-contribuir)
 
 <h3 align="center">
-  <a href="https://dominguetigs.github.io/memory-game/src" target="_blank">Acessar a demonstração</a>
+  <a
+    href="https://dominguetigs.github.io/memory-game/src"
+    target="_blank"
+  >Acessar a demonstração</a>
 </h3>
 
 <a id="sobre"></a>
@@ -38,7 +41,12 @@ Além de ter sido construído totalmente em **Javascript**, **CSS3** e **HTML5**
 ## :iphone: Screens
 
 <h4 align="center">
-    <img alt="Memory Game Screen" title="#memory-game-screen" src="https://ik.imagekit.io/lke8mppx9a/memory-game_cfbWxU5d2.png">
+    <img 
+      alt="Memory Game Screen"
+      width="250px"
+      title="#memory-game-screen"
+      src="https://ik.imagekit.io/lke8mppx9a/memory-game_cfbWxU5d2.png"
+    />
 </h4>
 
 ---
@@ -78,5 +86,8 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 ---
 
 <h4 align="center">
-    Feito com 💙 por <a href="https://www.linkedin.com/in/gustavodomingueti/" target="_blank">Gustavo Domingueti</a>
+    Feito com 💙 por <a
+      href="https://www.linkedin.com/in/gustavodomingueti/"
+      target="_blank"
+    >Gustavo Domingueti</a>
 </h4>
