@@ -43,7 +43,7 @@ Além de ter sido construído totalmente em **Javascript**, **CSS3** e **HTML5**
 <h4 align="center">
     <img 
       alt="Memory Game Screen"
-      width="250px"
+      width="300px"
       title="#memory-game-screen"
       src="https://ik.imagekit.io/lke8mppx9a/memory-game_cfbWxU5d2.png"
     />
