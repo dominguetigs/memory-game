@@ -6,7 +6,6 @@
 
 - [Sobre](#sobre)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Screens](#screens)
 - [Pré-requisitos](#pre-requisitos)
 - [Como Usar](#como-usar)
 - [Como Contribuir](#como-contribuir)
@@ -32,8 +31,6 @@ Além de ter sido construído totalmente em **Javascript**, **CSS3** e **HTML5**
 
 - [Webpack](https://webpack.js.org/)
 - [Babel](https://babeljs.io/)
-
-<a id="screens"></a>
 
 ## :iphone: Screens
 
