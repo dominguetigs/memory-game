@@ -86,6 +86,8 @@ Além de ter sido construído totalmente em **Javascript**, **CSS3** e **HTML5**
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
+---
+
 <h4 align="center">
     Feito com 💙 por <a
       href="https://www.linkedin.com/in/gustavodomingueti/"
