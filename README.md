@@ -50,13 +50,13 @@ Além de ter sido construído totalmente em **Javascript**, **CSS3** e **HTML5**
 ## :fire: Como usar
 
 ```bash
-  # Clonar o repositório
+  # Clone o repositório
   $ git clone git@github.com:dominguetigs/memory-game.git
 
-  # Instalar as dependências
+  # Instale as dependências
   $ npm install
 
-  # Iniciar a aplicação
+  # Inicie o jogo
   $ npm start
 ```
 
@@ -64,10 +64,18 @@ Além de ter sido construído totalmente em **Javascript**, **CSS3** e **HTML5**
 
 ## :recycle: Como contribuir
 
-- Faça um Fork desse repositório,
-- Crie uma branch com a sua feature: `git checkout -b my-feature`
-- Commit suas mudanças: `git commit -m 'feat: My new feature'`
-- Push a sua branch: `git push origin my-feature`
+- Faça um Fork desse repositório
+
+```bash
+  # Crie uma branch com a sua feature
+  $ git checkout -b my-feature
+
+  # Commit suas mudanças
+  $ git commit -m 'feat: My new feature'
+
+  # Push a sua branch
+  $ git push origin my-feature
+```
 
 ## :memo: License
 
