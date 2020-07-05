@@ -13,7 +13,7 @@
     <img alt="Made by Gustavo Domingueti" src="https://img.shields.io/badge/made%20by-Gustavo%20Domingueti-0078D7">
   </a>
   <a href="LICENSE.md" target="_blank">
-    <img alt="LICENSE" src="https://img.shields.io/github/license/dominguetigs/memory-game?color=0078D7">
+    <img alt="LICENSE" src="https://img.shields.io/github/license/dominguetigs/memory-game?color=7159C1">
   </a>
 </p>
 
