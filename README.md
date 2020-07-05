@@ -1,5 +1,5 @@
 <h1 align="center">
-    Jogo da Memória
+    Memory Game
 </h1>
 
 # Índice
@@ -65,7 +65,7 @@ Além de ter sido construído totalmente em **Javascript**, **CSS3** e **HTML5**
   $ npm install
 
   # Inicie o jogo
-  $ npm start
+  $ yarn start
 ```
 
 <a id="como-contribuir"></a>
