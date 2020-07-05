@@ -2,13 +2,29 @@
     Memory Game
 </h1>
 
-# Índice
+<p align="center">
+  <a href="https://nodejs.org/en/" target="_blank">
+    <img alt="Node.js version" src="https://img.shields.io/badge/node-v12.18.0-brightgreen">
+  </a>
+  <a href="https://yarnpkg.com/" target="_blank">
+    <img alt="Yarn version" src="https://img.shields.io/badge/yarn-v1.22.4-blue%20">
+  </a>
+  <a href="https://www.linkedin.com/in/gustavodomingueti/" target="_blank">
+    <img alt="Made by Gustavo Domingueti" src="https://img.shields.io/badge/made%20by-Gustavo%20Domingueti-0078D7">
+  </a>
+  <a href="LICENSE.md" target="_blank">
+    <img alt="LICENSE" src="https://img.shields.io/github/license/dominguetigs/memory-game?color=0078D7">
+  </a>
+</p>
 
-- [Sobre](#sobre)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Pré-requisitos](#pre-requisitos)
-- [Como Usar](#como-usar)
-- [Como Contribuir](#como-contribuir)
+<p align="center">
+  <a href="#sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#tecnologias-utilizadas">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#pre-requisitos">Pré-requisitos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#como-usar">Como usar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#como-contribuir">Como contribuir</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#license">Licença</a>
+</p>
 
 <h3 align="center">
   <a
@@ -31,6 +47,8 @@ Além de ter sido construído totalmente em **Javascript**, **CSS3** e **HTML5**
 
 - [Webpack](https://webpack.js.org/)
 - [Babel](https://babeljs.io/)
+
+<a id="screens"></a>
 
 ## :iphone: Screens
 
@@ -62,7 +80,7 @@ Além de ter sido construído totalmente em **Javascript**, **CSS3** e **HTML5**
   $ npm install
 
   # Inicie o jogo
-  $ yarn start
+  $ npm start
 ```
 
 <a id="como-contribuir"></a>
@@ -82,14 +100,14 @@ Além de ter sido construído totalmente em **Javascript**, **CSS3** e **HTML5**
   $ git push origin my-feature
 ```
 
+<a id="license"></a>
+
 ## :memo: License
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
----
-
 <h4 align="center">
-    Feito com 💙 por <a
+    Feito com 💙 by <a
       href="https://www.linkedin.com/in/gustavodomingueti/"
       target="_blank"
     >Gustavo Domingueti</a>
