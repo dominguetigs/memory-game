@@ -7,6 +7,7 @@
 - [Sobre](#sobre)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Screens](#screens)
+- [Pré-requisitos](#pre-requisitos)
 - [Como Usar](#como-usar)
 - [Como Contribuir](#como-contribuir)
 
@@ -45,9 +46,16 @@ Além de ter sido construído totalmente em **Javascript**, **CSS3** e **HTML5**
     />
 </h4>
 
+<a id="pre-requisitos"></a>
+
+## :fire: Pré-requisitos
+
+- [Node.js](https://nodejs.org/)
+- [Yarn](https://yarnpkg.com/)
+
 <a id="como-usar"></a>
 
-## :fire: Como usar
+## :zap: Como usar
 
 ```bash
   # Clone o repositório
