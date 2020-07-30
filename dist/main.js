@@ -81,22 +81,10 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./public/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ "./public/index.js":
-/*!*************************!*\
-  !*** ./public/index.js ***!
-  \*************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_game_draw__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../src/game/draw */ \"./src/game/draw.js\");\n/* harmony import */ var _src_game_game__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../src/game/game */ \"./src/game/game.js\");\n\n\nvar container = document.querySelector('.container');\nvar gameContainer = document.getElementById(\"game-container\");\nvar modalContainer = document.querySelector('.modal-container');\nvar gameStartButton = document.querySelector('.modal button');\nvar enemyScore = document.querySelector('.score.enemy');\nvar playerScore = document.querySelector('.score.player');\nmodalContainer.style.display = 'block';\ngameStartButton.addEventListener('click', function (e) {\n  var difficulty = document.querySelector('input[name=\"difficulty\"]:checked').value;\n  modalContainer.style.display = 'none';\n  container.style.display = 'block';\n  enemyScore.classList.remove('turn');\n  playerScore.classList.remove('turn');\n  new _src_game_draw__WEBPACK_IMPORTED_MODULE_0__[\"default\"](gameContainer, 'easy').init();\n  setTimeout(function () {\n    return new _src_game_game__WEBPACK_IMPORTED_MODULE_1__[\"default\"](difficulty).init();\n  }, 3300);\n});\n\n//# sourceURL=webpack:///./public/index.js?");
-
-/***/ }),
 
 /***/ "./src/game/contants.js":
 /*!******************************!*\
@@ -167,6 +155,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"utils\", function() { return utils; });\nvar utils = {\n  // Shuffle elements in array\n  shuffle: function shuffle(array) {\n    var currentIndex = array.length;\n    var temporaryValue;\n    var randomIndex; // While there remain elements to shuffle...\n\n    while (currentIndex !== 0) {\n      // Pick a remaining element...\n      randomIndex = Math.floor(Math.random() * currentIndex);\n      currentIndex -= 1; // And swap it with the current element.\n\n      temporaryValue = array[currentIndex];\n      array[currentIndex] = array[randomIndex];\n      array[randomIndex] = temporaryValue;\n    }\n\n    return array;\n  },\n  getRandomNumber: function getRandomNumber(range) {\n    return Math.floor(Math.random() * range);\n  }\n};\n\n//# sourceURL=webpack:///./src/game/utils.js?");
+
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _game_draw__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./game/draw */ \"./src/game/draw.js\");\n/* harmony import */ var _game_game__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./game/game */ \"./src/game/game.js\");\n\n\nvar container = document.querySelector('.container');\nvar gameContainer = document.getElementById(\"game-container\");\nvar modalContainer = document.querySelector('.modal-container');\nvar gameStartButton = document.querySelector('.modal button');\nvar enemyScore = document.querySelector('.score.enemy');\nvar playerScore = document.querySelector('.score.player');\nmodalContainer.style.display = 'block';\ngameStartButton.addEventListener('click', function (e) {\n  var difficulty = document.querySelector('input[name=\"difficulty\"]:checked').value;\n  modalContainer.style.display = 'none';\n  container.style.display = 'block';\n  enemyScore.classList.remove('turn');\n  playerScore.classList.remove('turn');\n  new _game_draw__WEBPACK_IMPORTED_MODULE_0__[\"default\"](gameContainer, 'easy').init();\n  setTimeout(function () {\n    return new _game_game__WEBPACK_IMPORTED_MODULE_1__[\"default\"](difficulty).init();\n  }, 3300);\n});\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
