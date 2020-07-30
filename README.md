@@ -77,7 +77,7 @@ Além de ter sido construído totalmente em **Javascript**, **CSS3** e **HTML5**
   $ git clone git@github.com:dominguetigs/memory-game.git
 
   # Instale as dependências
-  $ npm install
+  $ yarn install
 
   # Inicie o jogo
   $ yarn start
