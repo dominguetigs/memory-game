@@ -1,5 +1,5 @@
-import Draw from './game/draw';
-import Game from './game/game';
+import Draw from '../src/game/draw';
+import Game from '../src/game/game';
 
 const container = document.querySelector('.container');
 const gameContainer = document.getElementById("game-container");
